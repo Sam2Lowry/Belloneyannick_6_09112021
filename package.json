@@ -1,14 +1,20 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet 6 de la formation au développement web : Piiquante",
   "main": "server.js",
   "scripts": {
     "devStart": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Yannick Bellone",
+  "license": "MIT",
+  "homepage": "https://github.com/Sam2Lowry/Belloneyannick_6_09112021#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sam2Lowry/Belloneyannick_6_09112021.git"},
+  "bugs": {
+    "url": "https://github.com/Sam2Lowry/Belloneyannick_6_09112021/issues"},
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.0.13"
