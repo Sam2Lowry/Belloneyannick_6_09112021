@@ -7,11 +7,9 @@
   <a href="https://github.com/Sam2Lowry/Belloneyannick_6_09112021/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/Sam2Lowry/Belloneyannick_6_09112021/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/Sam2Lowry/Piiquante" />
-  </a>
-  <a href="https://twitter.com/Sam2Lowry" target="_blank">
-    <img alt="Twitter: Sam2Lowry" src="https://img.shields.io/twitter/follow/Sam2Lowry.svg?style=social" />
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  <a href="https://twitter.com/Kaluptein" target="_blank">
+    <img alt="Twitter: Kaluptein" src="https://img.shields.io/twitter/follow/Sam2Lowry.svg?style=social" />
   </a>
 </p>
 
@@ -29,16 +27,14 @@ npm install
 
 👤 **Yannick Bellone**
 
-* Twitter: [@Sam2Lowry](https://twitter.com/Sam2Lowry)
+* Twitter: [@Sam2Lowry](https://twitter.com/kaluptein)
 * Github: [@Sam2Lowry](https://github.com/Sam2Lowry)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Sam2Lowry/Belloneyannick_6_09112021/issues). You can also take a look at the [contributing guide](https://github.com/Sam2Lowry/Belloneyannick_6_09112021/blob/master/CONTRIBUTING.md).
 
-## Show your support
 
-Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
