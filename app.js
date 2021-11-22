@@ -29,12 +29,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
 
 app.use("/api/auth", userRoutes);
-
 // app.use("/api/sauces", sauceRoutes);
 
 module.exports = app;
