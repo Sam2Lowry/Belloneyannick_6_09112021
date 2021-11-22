@@ -8,7 +8,7 @@ exports.signup = (req, res, next) => {
       .then(hash => {
         const user = new user({
           email: req.body.email,
-          password: hash
+          passwordHashed: hash
         });
         user.save()
           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
@@ -23,7 +23,7 @@ exports.signup = (req, res, next) => {
         if (!user) {
           return res.status(401).json({ error: 'Utilisateur non trouvé !' });
         }
-        bcrypt.compare(req.body.password, user.password)
+        bcrypt.compare(req.body.password, user.passwordHashed)
           .then(valid => {
             if (!valid) {
               return res.status(401).json({ error: 'Mot de passe incorrect !' });
