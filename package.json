@@ -4,7 +4,8 @@
   "description": "Projet 6 de la formation au développement web : Piiquante",
   "main": "server.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Yannick Bellone",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
+    "jest": "^27.3.1",
     "nodemon": "^2.0.15"
   }
 }
