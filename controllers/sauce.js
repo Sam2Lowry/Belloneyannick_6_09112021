@@ -60,27 +60,38 @@ exports.getAllSauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
-// define a like statut for a sauce from 1 to -1 (like or dislike) and add 1 to the like or -1 to the dislike statut of the sauce in the database and use can be used to add or remove a like or dislike
 exports.likeSauce = (req, res, next) => {
-  Sauce.findOne({ _id: req.params.id })
+  const userId = req.body.userId;
+  const sauceId = req.params.id;
+  const like = req.body.like;
+  Sauce.findOne({ _id: sauceId })
     .then((sauce) => {
-      switch (sauce.like) {
+      switch(req.body.like) {
+        case 1:
+          sauce.likes += 1;
+          sauce.usersLiked.push(userId);
+          break;
         case -1:
-          Sauce.updateOne({ _id: req.params.id }, { like: 0 })
-            .then(() => res.status(200).json({ message: "Sauce modifiée !" }))
-            .catch((error) => res.status(400).json({ error }));
+          sauce.dislikes += 1;
+          sauce.usersDisliked.push(userId);
           break;
         case 0:
-          Sauce.updateOne({ _id: req.params.id }, { like: 1 })
-            .then(() => res.status(200).json({ message: "Sauce modifiée !" }))
-            .catch((error) => res.status(400).json({ error }));
-          break;
-        case 1:
-          Sauce.updateOne({ _id: req.params.id }, { like: -1 })
-            .then(() => res.status(200).json({ message: "Sauce modifiée !" }))
-            .catch((error) => res.status(400).json({ error }));
+          const index = sauce.usersLiked.indexOf(userId);
+          const index2 = sauce.usersDisliked.indexOf(userId);
+          if(index !== -1) {
+            sauce.likes -= 1;
+            sauce.usersLiked.splice(index, 1);
+          }
+          if(index2 !== -1) {
+            sauce.dislikes -= 1;
+            sauce.usersDisliked.splice(index2, 1);
+          }
           break;
       }
+      sauce
+        .save()
+        .then(() => res.status(201).json({ message: "Like enregistré !" }))
+        .catch((error) => res.status(400).json({ error }));
     })
     .catch((error) => res.status(500).json({ error }));
-};
+}
