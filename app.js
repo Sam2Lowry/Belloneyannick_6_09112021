@@ -1,11 +1,13 @@
+require("dotenv").config();
 const express = require("express");
-const app = express();
+const helmet = require("helmet");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/user");
 const sauceRoutes = require("./routes/sauce");
+const app = express();
 
-require("dotenv").config();
 app.use(express.json());
+app.use(helmet());
 
 // Base de donnée MongoDB
 mongoose.connect(process.env.DATABASE_URL, {
@@ -28,7 +30,6 @@ app.use((req, res, next) => {
   );
   next();
 });
-
 
 app.use("/api/auth", userRoutes);
 app.use("/api/sauces", sauceRoutes);

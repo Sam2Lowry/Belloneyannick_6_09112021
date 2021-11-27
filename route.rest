@@ -19,3 +19,16 @@ Content-Type: application/json
 ###
 
 POST http://localhost:3000/api/sauces
+Content-Type: application/json
+
+{
+  "name": "test sauce",
+  "manufacturer": "test manufacturer",
+  "description": "test description",
+  "mainPepper": "test pepper",
+  "spicy": true,
+  "vegetarian": true,
+  "vegan": true,
+  "price": 10,
+  "imageUrl": "test url"
+}
