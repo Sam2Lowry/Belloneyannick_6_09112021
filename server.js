@@ -42,7 +42,7 @@ const errorHandler = (error) => {
 
 const server = http.createServer(app);
 
-// create a write stream
+// create a log stream
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
 // setup the logger
