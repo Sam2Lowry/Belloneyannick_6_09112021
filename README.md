@@ -23,7 +23,7 @@ d'avis gastronomiques
 
 
 ## :old_key: Installation du backend
-Installer `nodejs` et `npm` sur votre machine en local. Après, se positionner sur le dossier backend à partir du projet.
+Installer [`nodejs`](https://nodejs.org/fr/download/) et [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) sur votre machine en local. Après, se positionner sur le dossier backend à partir du projet.
 ```
 > cd backend
 ```
@@ -38,10 +38,10 @@ Enfin, lancer le projet :
 Le serveur sera accessible sur http://localhost:3000 par défaut.
 
 ## :rocket: Installation du frontend
-Le projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
-Pour le faire fonctionner, installer `node-sass` à part.
-Après, se positionner sur le dossier frontend à partir du projet.
-Ouvrez le fichier Package.json et modifiez la version de run-script-os en **"run-script-os": "^1.1.6"**
+Le projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2. <br />
+Pour le faire fonctionner, installer le `node-sass` correspondant en suivant ce lien : [Node-sass](https://www.npmjs.com/package/node-sass)  <br />
+Après, se positionner sur le dossier frontend à partir du projet.  <br />
+Ouvrez le fichier *Package.json* et modifiez la **version** de *run-script-os* en **"run-script-os": "^1.1.6"**
 
 ```
 > cd frontend
