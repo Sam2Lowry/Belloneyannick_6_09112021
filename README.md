@@ -31,9 +31,9 @@ Ensuite, installer les composants du projet.
 ```
 > npm install
 ```
-Enfin, lancer le projet avec `nodemon serve`
+Enfin, lancer le projet :
 ```
-> nodemon serve
+> npm run devStart
 ```
 Le serveur sera accessible sur http://localhost:3000 par défaut.
 
@@ -50,7 +50,7 @@ Ensuite, installer les composants du projet.
 ```
 > npm install
 ```
-Enfin, démarrer `ng serve` pour avoir accès au serveur de développement. Rendez-vous sur `http://localhost:4200/`.
+Enfin, démarrer votre frontend avec la commande : 
 ```
-> ng serve
+> npm run start
 ```
