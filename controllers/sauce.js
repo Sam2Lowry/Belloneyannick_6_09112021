@@ -60,6 +60,14 @@ exports.getAllSauce = (req, res, next) => {
     .catch((error) => res.status(400).json({ error }));
 };
 
+/*
+1. Find the sauce with the provided id.
+2. Check if the user has already liked or disliked the sauce.
+3. If the user has already liked or disliked the sauce, remove the user from the appropriate array.
+4. If the user has not already liked or disliked the sauce, increment the appropriate count and add the user to the appropriate array.
+5. Save the sauce.
+6. Return a success message.
+*/
 exports.likeSauce = (req, res, next) => {
   const userId = req.body.userId;
   const sauceId = req.params.id;
