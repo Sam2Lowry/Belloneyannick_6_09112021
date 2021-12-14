@@ -27,7 +27,8 @@
     "mongoose-morgan": "^1.0.17",
     "mongoose-unique-validator": "^3.0.0",
     "multer": "^1.4.3",
-    "ponicode": "^0.56.16"
+    "ponicode": "^0.56.16",
+    "rotating-file-stream": "^3.0.2"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",

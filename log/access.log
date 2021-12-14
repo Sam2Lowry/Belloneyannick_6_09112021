@@ -1,0 +1,2 @@
+::1 - - [06/Dec/2021:11:39:09 +0000] "GET /api/auth/signup HTTP/1.1" 404 154 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.43"
+::1 - - [06/Dec/2021:11:39:13 +0000] "GET /api/auth/signup HTTP/1.1" 404 154 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.43"
