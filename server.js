@@ -1,6 +1,6 @@
 const http = require("http");
 const app = require("./app");
-const fs = require("fs");
+const rfs = require("rotating-file-stream");
 const path = require("path");
 const morgan = require("morgan");
 require("dotenv").config();
@@ -53,10 +53,13 @@ const errorHandler = (error) => {
 const server = http.createServer(app);
 
 // create a log stream
-const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+const accessLogStream = rfs.createStream("access.log", {
+  interval: "1d", // rotate daily
+  path: path.join(__dirname, "log"),
+});
 
 // setup the logger
-app.use(morgan('combined', { stream: accessLogStream }))
+app.use(morgan("combined", { stream: accessLogStream }));
 
 server.on("error", errorHandler);
 server.on("listening", () => {

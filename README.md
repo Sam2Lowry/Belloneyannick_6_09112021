@@ -54,3 +54,25 @@ Enfin, démarrer votre frontend avec la commande :
 ```
 > npm run start
 ```
+Si jamais le port 3000 est déjà utilisé : 
+```	
+npx kill-port 3000
+```
+
+Avec l'utilisation de variables environnementales (dotenv), pour le bon fonctionnement de l'applicaiton il faut substituer trois clefs : 
+
+**App.js**
+*ligne 14*
+process.env.DATABASE_URL 
+A remplacer par votre vos identifiants de connexion MongoDB
+ 
+**user.js**
+*ligne 35*
+process.env.SECRET_KEY
+A remplacer par une clef X de votre choix.
+           
+**auth.js**
+*ligne 15*
+process.env.SECRET_KEY
+Remplacer par la clef X utilisé ci-dessus
+

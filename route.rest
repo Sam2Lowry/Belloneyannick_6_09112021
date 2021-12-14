@@ -32,3 +32,4 @@ Content-Type: application/json
   "price": 10,
   "imageUrl": "test url"
 }
+
