@@ -59,7 +59,7 @@ Si jamais le port 3000 est déjà utilisé :
 npx kill-port 3000
 ```
 
-Avec l'utilisation de variables environnementales (dotenv), pour le bon fonctionnement de l'applicaiton il faut substituer trois clefs : 
+Avec l'utilisation de variables environnementales (dotenv), pour le bon fonctionnement de l'application il faut substituer trois clefs : 
 
 **App.js**
 *ligne 14*
